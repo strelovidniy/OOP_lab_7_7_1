@@ -5,7 +5,7 @@ namespace OOP_lab_7_7_1
 {
     class IO : IReadWrite
     {
-        public const string Format = "{0, -15} {1, -15} {2, -15}";
+        public const string Format = "{0, -15} {1, -15} {2, -15} {3, -20} {4, -20}";
 
         public void Read()
         {
@@ -18,11 +18,11 @@ namespace OOP_lab_7_7_1
 
         public void Write()
         {
-            Console.WriteLine(Format, "Порода", "Цiна", "Висота");
+            Console.WriteLine(Format, "Порода", "Цiна", "Висота", "Плодоноснiсть", "Кiлькiсть");
 
             foreach (Tree tree in Program.garden)
             {
-                Console.WriteLine(Format, tree.Type, tree.Price, tree.Height);
+                Console.WriteLine(Format, tree.Type, tree.Price, tree.Height, tree.Fruitfulness.ToString(), tree.Count);
             }
         }
     }

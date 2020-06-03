@@ -13,11 +13,11 @@ namespace OOP_lab_7_7_1
 
         public Trees(string[] elements)
         {
-            _trees = new Tree[elements.Length / 3];
+            _trees = new Tree[elements.Length / 5];
 
-            for (int i = 0; i < elements.Length; i += 3)
+            for (int i = 0; i < elements.Length; i += 5)
             {
-                _trees[i / 3] = new Tree(elements[i], int.Parse(elements[i + 1]), int.Parse(elements[i + 2]));
+                _trees[i / 5] = new Tree(elements[i], int.Parse(elements[i + 1]), int.Parse(elements[i + 2]), bool.Parse(elements[i + 3]), int.Parse(elements[i + 4]));
             }
         }
 

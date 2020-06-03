@@ -8,6 +8,8 @@ namespace OOP_lab_7_7_1
         private string _type;
         private int _price;
         private int _height;
+        private int _count;
+        private bool _fruitfulness;
 
         public string Type
         {
@@ -27,11 +29,25 @@ namespace OOP_lab_7_7_1
             set => _height = value;
         }
 
-        public Tree(string type, int price, int height)
+        public int Count
+        {
+            get => _count;
+            set => _count = value;
+        }
+
+        public bool Fruitfulness
+        {
+            get => _fruitfulness;
+            set => _fruitfulness = value;
+        }
+
+        public Tree(string type, int price, int height, bool fruitfulness, int count)
         {
             _type = type;
             _price = price;
             _height = height;
+            _fruitfulness = fruitfulness;
+            _count = count;
         }
 
         public int CompareTo(object tree)
